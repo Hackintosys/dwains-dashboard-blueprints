@@ -15,31 +15,31 @@ blueprint:
     weather_entity:
       name: Weather entity
       description: This is the weather entity (e.g weather.openweathermap )
-      type: entity-picker
+      type: weather.openweathermap
     weather_entity_temperature:
       name: temperature
       description: This is the temperature from the weather entity (e.g.  sensor.openweathermap_temperature )
-      type: entity-picker
+      type: sensor.openweathermap_temperature
     weather_entity_feels_like:
       name: Feels Like
       description: This is the feels like temperature from the weather entity (e.g. sensor.openweathermap_feels_like_temperature )
-      type: entity-picker
+      type: sensor.openweathermap_feels_like_temperature
     weather_entity_humidity:
       name: Humidity
       description: This is the humidity from the weather entity (e.g. sensor.openweathermap_humidity )
-      type: entity-picker
+      type: sensor.openweathermap_humidity
     weather_entity_pressure:
       name: Barometric pressure
       description: This is the pressure from the weather entity (e.g. sensor.openweathermap_pressure)
-      type: entity-picker
+      type: sensor.openweathermap_pressure
     wind_speed:
       name: Wind Speed
       description: Wind speed sensor (e.g. sensor.openweathermap_wind_speed )
-      type: entity-picker
+      type: sensor.openweathermap_wind_speed
     wind_bearing:
       name: Wind Direction
       description: Wind direction sensor (e.g. sensor.openweathermap_wind_bearing )
-      type: entity-picker
+      type: sensor.openweathermap_wind_bearing
     weather_alert_entity:
       name: Weather Alert entity
       description: Currently this is only tested with nws_alerts
@@ -47,11 +47,11 @@ blueprint:
     snow_sensor:
       name: Snow Sensor
       description: Snow accumulation sensor (e.g. sensor.openweathermap.snow)
-      type: entity-picker
+      type: sensor.openweathermap.snow
     rain_sensor:
       name: Rain Sensor
       description: Rain accumulation sensor (e.g. sensor.openweathermap.rain)
-      type: entity-picker
+      type: sensor.openweathermap.rain
 # Medical Alerts
     allergy_index_today:
       name: Current Allergy index
@@ -84,11 +84,11 @@ blueprint:
     forecast_rain:
       name: Forecast Precipitation Sensor
       description: Forecast for Precipitation
-      type: entity-picker
+      type: sensor.openweathermap_forecast_precipitation
     forecast_rain_chance:
       name: Forecast Precipitation Percentage
       description: Forecast for Precipitation Percentage
-      type: entity-picker
+      type: sensor.openweathermap_forecast_precipitation_probability
 #Lat and Long for the radar map
     long_home:
       name: Longitude for your home
@@ -847,7 +847,7 @@ card:
                         }
                       entities:
                         - entity: sensor.season
-                        - entity: sensor.moon
+                        - entity: sensor.moon_phase
                         - entity: sun.sun
                         - entity: $weather_entity_humidity$
                           name: $Humidity$
